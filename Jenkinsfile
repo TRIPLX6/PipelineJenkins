@@ -10,7 +10,8 @@ pipeline {
         stage('Git') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/matthcol/movieapp_jdbc.git'
+                    branch: 'main'
             }
         }
         stage('Compile'){
@@ -34,7 +35,7 @@ pipeline {
             }
             post{
                 success {
-                    archiveArtifacts 'target/*.jar'
+                    archiveArtifacts 'target/*.[wj]jar'
                 }
             }
         }
