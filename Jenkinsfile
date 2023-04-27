@@ -20,6 +20,11 @@ pipeline {
                     branch: "${params.BRANCH}"
             }
         }
+        stage('Java') {
+            steps {
+               sh "java --version"
+            }
+        }
         stage('Compile'){
             steps{
                 sh "mvn clean compile"
