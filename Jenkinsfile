@@ -4,7 +4,7 @@ pipeline {
     parameters {
         string(name: 'URL', defaultValue: '', description: 'URL Java Project to Build')
         string(name: 'BRANCH', defaultValue: 'main', description: 'Branch to Build')
-        string(name: 'JAVA ', defaultValue: '', description: 'JAVA VERSION')
+        choice(name: 'JAVA ', defaultValue: '', description: 'JAVA VERSION')
     }
     
     tools {
